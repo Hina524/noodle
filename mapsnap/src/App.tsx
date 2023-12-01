@@ -1,21 +1,22 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header bg-wed">
+      <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p className="text-wed-dark">
-           <code>WED</code> へようこそ〜〜〜
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
-          className="text-gray underline"
-          href="https://wed.company/"
+          className="App-link"
+          href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn WED
+          Learn React
         </a>
       </header>
     </div>
