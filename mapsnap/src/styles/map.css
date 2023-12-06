@@ -3,6 +3,9 @@
   align-items: flex-start;
   justify-content: center;
 } */
+.Posts {
+  padding: 20px;
+}
 
 .Card {
   display: flex;
@@ -10,27 +13,29 @@
   align-items: center;
   background-color: #fff;
   box-shadow: 0px 4px 30px #00000014;
-  width:754px;
-  height:261px;
+  width:550px;
+  height:150px;
   border-radius:30px;
   padding: 30px;
 }
 
 .Pic {
-  height: 202px;
+  height: 150px;
+  border-radius:10px;
   display: flex;
   justify-content: flex-start;
 }
 
 .List {
   line-height: 0px;
-  font-size: 15px;
+  font-size: 12px;
+  padding-left: 20px;
 }
 
 .Title {
   display: flex;
   align-items: center;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .Place {
@@ -51,4 +56,6 @@
 .Comment {
   display: flex;
   align-items: center;
+  width: 50px;
+  white-space: pre-wrap;
 }
