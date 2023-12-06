@@ -2,16 +2,19 @@ import React from 'react';
 import '../styles/map.css';
 import { GoogleMap, LoadScript, MarkerF } from "@react-google-maps/api";
 import { useState, useEffect } from 'react';
-import { Grid, Box } from '@mui/material';
+import PlaceIcon from '@mui/icons-material/Place';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import CameraAltIcon from '@mui/icons-material/CameraAlt';
+import GASSYOU from './photos/Gasshou.png'
 
 export const Map = () => {
   const [posts, setPosts] = useState([{
     title: 'ほげ',
-    place: '',
-    date: '',
-    camera: '',
+    place: 'GASSYOU',
+    date: '2023/05/20',
+    camera: 'CANON',
     fileUrl: '',
-    content: '',
+    content: 'www',
     lat: 35.182253007459444,
     lng: 136.90534328438358,
   },
@@ -54,7 +57,23 @@ export const Map = () => {
         {/* 投稿 */}
         {posts.map(post => (
           <div>
-            <p>{post.title}</p>
+            <img src={GASSYOU} className="Pic" alt="gassyou" />
+            <p className="Title">{post.title}</p>
+            <div className="Place">
+              <PlaceIcon className='icon' />
+              <p>{post.place}</p>
+            </div>
+            <div className="Date">
+              <CalendarMonthIcon className='icon' />
+              <p>{post.date}</p>
+            </div>
+            <div className="Camera">
+              <CameraAltIcon className='icon' />
+              <p>{post.camera}</p>
+            </div>
+            <div className="Comment">
+              <p>{post.content}</p>
+            </div>
           </div>
         ))}
       </div>

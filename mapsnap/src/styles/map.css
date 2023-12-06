@@ -1,5 +1,36 @@
-.App {
+/* .App {
   display: flex;
   align-items: flex-start;
-  /* justify-content: center; */
+  justify-content: center;
+} */
+
+.Pic {
+  height: 202px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.Title {
+  display: flex;
+  align-items: center;
+}
+
+.Place {
+  display: flex;
+  align-items: center;
+}
+
+.Date {
+  display: flex;
+  align-items: center;
+}
+
+.Camera {
+  display: flex;
+  align-items: center;
+}
+
+.Comment {
+  display: flex;
+  align-items: center;
 }
