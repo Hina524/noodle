@@ -5,6 +5,8 @@
 } */
 .Posts {
   padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .Card {
@@ -17,6 +19,7 @@
   height:150px;
   border-radius:30px;
   padding: 30px;
+  margin-bottom: 24px;
 }
 
 .Pic {
@@ -56,6 +59,11 @@
 .Comment {
   display: flex;
   align-items: center;
-  width: 50px;
-  white-space: pre-wrap;
+}
+
+.Map {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-left: 24px;
 }
