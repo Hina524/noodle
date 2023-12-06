@@ -56,6 +56,4 @@
 .Comment {
   display: flex;
   align-items: center;
-  width: 50px;
-  white-space: pre-wrap;
 }
