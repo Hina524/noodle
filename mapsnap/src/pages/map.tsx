@@ -46,6 +46,7 @@ export const Map = () => {
     height: "500px"
   };
 
+
   // const handleMapClick = (e) => {
   //   console.log(e.latLng.lat(), e.latLng.lng())
   //   setPostions(positions.concat([{ lat: e.latLng.lat(), lng: e.latLng.lng()}]))
