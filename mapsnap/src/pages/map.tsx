@@ -4,7 +4,6 @@ import { GoogleMap, LoadScript, MarkerF } from "@react-google-maps/api";
 import { useState, useEffect } from 'react';
 import { LuMapPin } from "react-icons/lu";
 import { MdOutlineDateRange, MdOutlineCameraAlt } from "react-icons/md";
-import GASSYOU from './photos/Gasshou.png'
 
 export const Map = () => {
   const [posts, setPosts] = useState([{
@@ -12,8 +11,8 @@ export const Map = () => {
     place: 'GASSYOU',
     date: '2023/05/20',
     camera: 'CANON',
-    fileUrl: '',
-    content: 'wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww',
+    fileUrl: 'https://gyazo.com/20fd27a7b35cf22161b319cd4b1225cf.jpg',
+    content: 'wwwwwwwwww',
     lat: 35.182253007459444,
     lng: 136.90534328438358,
   },
@@ -41,7 +40,7 @@ export const Map = () => {
   }, [])
 
   const container = {
-    width: "75%",
+    width: "100%",
     height: "500px"
   };
 
@@ -56,24 +55,26 @@ export const Map = () => {
       <div className="Posts">
         {/* 投稿 */}
         {posts.map(post => (
-          <div className="Card">
-            <img src={GASSYOU} className="Pic" alt="gassyou" />
-            <div className="List">
-              <p className="Title">{post.title}</p>
-              <div className="Place">
-                <LuMapPin />
-                <p>{post.place}</p>
-              </div>
-              <div className="Date">
-                <MdOutlineDateRange />
-                <p>{post.date}</p>
-              </div>
-              <div className="Camera">
-                <MdOutlineCameraAlt />
-                <p>{post.camera}</p>
-              </div>
-              <div className="Comment">
-                <p>{post.content}</p>
+          <div className="Pad">
+            <div className="Card">
+              <img src={post.fileUrl} className="Pic" alt="picture" />
+              <div className="List">
+                <p className="Title">{post.title}</p>
+                <div className="Place">
+                  <LuMapPin />
+                  <p>{post.place}</p>
+                </div>
+                <div className="Date">
+                  <MdOutlineDateRange />
+                  <p>{post.date}</p>
+                </div>
+                <div className="Camera">
+                  <MdOutlineCameraAlt />
+                  <p>{post.camera}</p>
+                </div>
+                <div className="Comment">
+                  <p>{post.content}</p>
+                </div>
               </div>
             </div>
           </div>
@@ -82,7 +83,7 @@ export const Map = () => {
 
       <div className="Map">
         {/* Google Map */}
-        <LoadScript googleMapsApiKey="APIキー(アクセスキー)">
+        <LoadScript googleMapsApiKey="AIzaSyA67srj5WMrUOl9O8co9J4BQGh2QcExe9k">
           <GoogleMap mapContainerStyle={container} center={{ lat: 35.182253007459444, lng: 136.90534328438358}} zoom={10}>
             {posts.map(post => <MarkerF position={{ lat: post.lat, lng: post.lng}} />)}
           </GoogleMap>
