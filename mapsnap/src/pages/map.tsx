@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/map.css';
 import { GoogleMap, LoadScript, MarkerF } from "@react-google-maps/api";
 import { useState, useEffect } from 'react';
@@ -7,24 +6,24 @@ import { MdOutlineDateRange, MdOutlineCameraAlt } from "react-icons/md";
 
 export const Map = () => {
   const [posts, setPosts] = useState([{
-    title: 'ほげ',
-    place: 'GASSYOU',
+    title: '逆さ合掌',
+    place: 'hirakawa village',
     date: '2023/05/20',
-    camera: 'CANON',
+    camera: 'CANON EOF kissM',
     fileUrl: 'https://gyazo.com/20fd27a7b35cf22161b319cd4b1225cf.jpg',
-    content: 'wwwwwwwwww',
-    lat: 35.182253007459444,
-    lng: 136.90534328438358,
+    content: '楽しかった！！！！！！',
+    lat: 36.25812542283973,
+    lng: 136.90668029348637,
   },
   {
-    title: 'ほげ',
-    place: '',
-    date: '',
-    camera: '',
-    fileUrl: '',
-    content: '',
-    lat: 35.282253007459444,
-    lng: 136.80534328438358,
+    title: '氷柱',
+    place: 'Shirakawa village',
+    date: '2023/0505/20',
+    camera: 'CANON EOF kissM',
+    fileUrl: 'https://i.gyazo.com/5439b0e3a5933934cb9b18747f895a7f.jpg',
+    content: 'つららができてた！！',
+    lat: 36.25578383594791,
+    lng: 136.90300470988356,
   }])
   // const [positions, setPostions] = useState([{
   //   // title: 'hogehoge',
@@ -84,7 +83,11 @@ export const Map = () => {
       <div className="Map">
         {/* Google Map */}
         <LoadScript googleMapsApiKey="AIzaSyA67srj5WMrUOl9O8co9J4BQGh2QcExe9k">
-          <GoogleMap mapContainerStyle={container} center={{ lat: 35.182253007459444, lng: 136.90534328438358}} zoom={10}>
+          <GoogleMap 
+            mapContainerStyle={container}
+            center={{ lat: 36.25609672573466, lng: 136.9054406313722}}
+            zoom={16}
+          >
             {posts.map(post => <MarkerF position={{ lat: post.lat, lng: post.lng}} />)}
           </GoogleMap>
         </LoadScript>
