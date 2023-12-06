@@ -4,15 +4,33 @@
   justify-content: center;
 } */
 
+.Card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 4px 30px #00000014;
+  width:754px;
+  height:261px;
+  border-radius:30px;
+  padding: 30px;
+}
+
 .Pic {
   height: 202px;
   display: flex;
   justify-content: flex-start;
 }
 
+.List {
+  line-height: 0px;
+  font-size: 15px;
+}
+
 .Title {
   display: flex;
   align-items: center;
+  font-size: 24px;
 }
 
 .Place {

@@ -46,6 +46,7 @@ export const Map = () => {
     height: "500px"
   };
 
+
   // const handleMapClick = (e) => {
   //   console.log(e.latLng.lat(), e.latLng.lng())
   //   setPostions(positions.concat([{ lat: e.latLng.lat(), lng: e.latLng.lng()}]))
@@ -56,23 +57,25 @@ export const Map = () => {
       <div className="Posts">
         {/* 投稿 */}
         {posts.map(post => (
-          <div>
+          <div className="Card">
             <img src={GASSYOU} className="Pic" alt="gassyou" />
-            <p className="Title">{post.title}</p>
-            <div className="Place">
-              <PlaceIcon className='icon' />
-              <p>{post.place}</p>
-            </div>
-            <div className="Date">
-              <CalendarMonthIcon className='icon' />
-              <p>{post.date}</p>
-            </div>
-            <div className="Camera">
-              <CameraAltIcon className='icon' />
-              <p>{post.camera}</p>
-            </div>
-            <div className="Comment">
-              <p>{post.content}</p>
+            <div className="List">
+              <p className="Title">{post.title}</p>
+              <div className="Place">
+                <PlaceIcon className='icon' />
+                <p>{post.place}</p>
+              </div>
+              <div className="Date">
+                <CalendarMonthIcon className='icon' />
+                <p>{post.date}</p>
+              </div>
+              <div className="Camera">
+                <CameraAltIcon className='icon' />
+                <p>{post.camera}</p>
+              </div>
+              <div className="Comment">
+                <p>{post.content}</p>
+              </div>
             </div>
           </div>
         ))}
