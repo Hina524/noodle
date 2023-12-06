@@ -51,6 +51,7 @@ export const Map = () => {
   //   setPostions(positions.concat([{ lat: e.latLng.lat(), lng: e.latLng.lng()}]))
   // }
 
+
   return (
     <div className="App">
       <div className="Posts">
